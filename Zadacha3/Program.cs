@@ -11,7 +11,7 @@ namespace Zadacha3
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            //the task with number of students written by the user
+            //the task with for cicle
             //Console.Write("Въведи брой ученици: ");
             //int n = int.Parse(Console.ReadLine());
             //int excelentGrades = 0;
@@ -36,7 +36,7 @@ namespace Zadacha3
             //Console.WriteLine("-----------------------------------------------------------------------");
             //Console.WriteLine();
 
-            //the task with the actual people in our group
+            //the task with lambda- the faster and easier way
             Console.Write("Въведи успеха на учениците от втора група по програмиране разделени със (space): ");
             double[] arr = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
             int poorGrades = arr.Count(num => num < 3 && num >= 2);
