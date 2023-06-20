@@ -16,15 +16,30 @@ namespace Zadacha2
             Console.Write("Въведи число (b): ");
             int b = int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.Write($"Всички нечетни числа в диапазона от |{a}| до |{b}| са: ");
-            for (int i = a; i <= b; i++)
+            if (a < b)
             {
-                if (i % 2 != 0)
+                Console.Write($"Всички нечетни числа в диапазона от |{a}| до |{b}| са: ");
+                for (int i = a; i <= b; i++)
                 {
-                    Console.Write($"{i} ");
+                    if (i % 2 != 0)
+                    {
+                        Console.Write($"{i} ");
+                    }
                 }
+                Console.WriteLine();
             }
-            Console.WriteLine();
+            if (b < a)
+            {
+                Console.Write($"Всички нечетни числа в диапазона от |{a}| до |{b}| са: ");
+                for (int i = b; i <= a; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        Console.Write($"{i} ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
